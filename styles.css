@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #1E3C72, #2A5298); /* Linear blue gradient */
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100%;
+    height: 100px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    color: black; /* Player option color (X or O) */
+}
+
+.cell.taken {
+    pointer-events: none;
+}
+
+.message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: #45a049;
+}
+
+.result-screen {
+    display: none;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.new-game-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-game-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .cell {
+        height: 80px;
+        font-size: 28px;
+    }
+
+    .game-container {
+        padding: 15px;
+    }
+}
